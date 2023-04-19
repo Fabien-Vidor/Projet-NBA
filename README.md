@@ -21,6 +21,6 @@ You will need to install the dependencies (in a dedicated environment) :
 pip install -r requirements.txt
 ```
 
-And to download and place in /data/ this file NBA Shot Locations 1997 - 2020.csv found at the following link:
+And to download and place in /data/ this file ('NBA Shot Locations 1997 - 2020.csv) found at the following link:
 
 https://www.kaggle.com/datasets/jonathangmwl/nba-shot-locations
