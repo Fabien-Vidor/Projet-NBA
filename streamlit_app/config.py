@@ -30,7 +30,6 @@ TEAM_MEMBERS = [
         linkedin_url="https://www.linkedin.com/in/fabien-vidor/",
         github_url="https://github.com/Fabien-Vidor/",
     ),
-    Member("Jane Doe"),
 ]
 
 PROMOTION = "Promotion Bootcamp Data Scientist - February 2023"
