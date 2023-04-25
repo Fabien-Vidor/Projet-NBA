@@ -1,8 +1,8 @@
 import streamlit as st
 
 
-title = "Projet NBA"
-sidebar_name = "Introduction"
+title = "Modélisation"
+sidebar_name = "Modélisation"
 
 
 def run():

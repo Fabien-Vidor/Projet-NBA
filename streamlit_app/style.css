@@ -31,9 +31,13 @@ footer {
 /* Sidebar */
 
 section[data-testid="stSidebar"] > div {
-  background-color: #10b8dd;
+  background-color: #aa7644;
   padding-top: 2rem;
+  background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p3/4577810-groupe-de-basket-ball-balls-vector-wallpaper-with-copy-space-vectoriel.jpg");
   padding-left: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 section[data-testid="stSidebar"] button[title="View fullscreen"] {
@@ -44,12 +48,8 @@ section[data-testid="stSidebar"] button[kind="icon"] {
   display: none;
 }
 
-section[data-testid="stSidebar"] .st-bk {
-  background-color: white;
-}
-
 section[data-testid="stSidebar"] .st-c0 {
-  background-color: black;
+  color: white;
 }
 
 section[data-testid="stSidebar"] hr {

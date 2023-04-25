@@ -1,14 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # ## Fonctions utiles
 
 # La première fonction permet de corriger les seuils en fonction de la difficulté au tir, 
 # on récupère les prédictions corrigées à partir desquelles on peut observer le classification_report pour voir les différences.
 # 
-
-# In[ ]:
-
 
 def pred_corr(X_test,y_proba,seuil = (0.5,0.5),lim = 5):
     temp =[(a,b[1]) for a,b in zip(X_test['Shot Difficulty'].reset_index()['Shot Difficulty'],y_proba)]
@@ -25,8 +19,6 @@ def pred_corr(X_test,y_proba,seuil = (0.5,0.5),lim = 5):
 
 # Cette fonction permet de visualiser la performance du modèle en fonction de la difficulté au tir.
 
-# In[ ]:
-
 
 def performance_by_difficulty(difficulty,model):
     X_difficulty = X_test.loc[X_test["Shot Difficulty"] == difficulty]
@@ -37,8 +29,6 @@ def performance_by_difficulty(difficulty,model):
 
 
 # Cette fonction permet d'observer la performance par joueur
-
-# In[ ]:
 
 
 def player_performance(player,model):
@@ -51,8 +41,6 @@ def player_performance(player,model):
 
 # Cette fonction renvoie le graphique qui nous montre la proportion de tirs réussis prédits et réels en fonction de la "Shot Difficulty"
 
-# In[ ]:
-
 
 def pred_by_diff(X_test,y_test,model):
     repart_quant=pd.concat([X_test,y_test],axis=1).groupby("Shot Difficulty")['Shot Made Flag'].mean()
@@ -64,8 +52,6 @@ def pred_by_diff(X_test,y_test,model):
 
 
 # Cette dernière fonction permet de faire un get dummies sur la variable Action Type à la place de créer "Shot Difficulty". On peut utiliser cette fonction pour voir la différence des modèles en fonction du preprocessing choisi sur la variable Action Type
-
-# In[ ]:
 
 
 from sklearn.model_selection import train_test_split,GridSearchCV

@@ -6,13 +6,14 @@ import streamlit as st
 import config
 
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
-from tabs import intro, second_tab, third_tab
+from tabs import intro, exploration, preparation, modelisation, demo
 
 
 st.set_page_config(
     page_title=config.TITLE,
-    page_icon="https://datascientest.com/wp-content/uploads/2020/03/cropped-favicon-datascientest-1-32x32.png",
+    page_icon="assets/favicon-2.png"
 )
+
 
 with open("style.css", "r") as f:
     style = f.read()
@@ -26,15 +27,17 @@ st.markdown(f"<style>{style}</style>", unsafe_allow_html=True)
 TABS = OrderedDict(
     [
         (intro.sidebar_name, intro),
-        (second_tab.sidebar_name, second_tab),
-        (third_tab.sidebar_name, third_tab),
+        (exploration.sidebar_name, exploration),
+        (preparation.sidebar_name, preparation),
+        (modelisation.sidebar_name, modelisation),
+        (demo.sidebar_name, demo),
     ]
 )
 
 
 def run():
     st.sidebar.image(
-        "https://dst-studio-template.s3.eu-west-3.amazonaws.com/logo-datascientest.png",
+        "assets/logo.png",
         width=200,
     )
     tab_name = st.sidebar.radio("", list(TABS.keys()), 0)
