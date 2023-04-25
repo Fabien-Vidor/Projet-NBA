@@ -1,4 +1,4 @@
-# Projet NBA
+# Project NBA
 
 ## Presentation
 
