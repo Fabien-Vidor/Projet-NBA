@@ -15,7 +15,7 @@ def run():
     st.markdown(
         """
         This is your app's second tab. Fill it in `tabs/second_tab.py`.
-        You can and probably should rename the file.
+        You can and probably skluhlkh rename the file.
 
         ## Test
 
