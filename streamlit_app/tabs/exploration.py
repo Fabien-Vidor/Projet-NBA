@@ -50,8 +50,6 @@ def shot_location(name):
     tab = Tabs(tabs=tabs)
     return tab
 
-p = shot_location("James Harden")
-
 def run():
 
     st.title(title)
@@ -84,5 +82,13 @@ def run():
 
     with st.expander("Afficher 5 lignes du dataframe"):
         st.dataframe(rank.sample(5), use_container_width=True)
+
+    option = st.selectbox(
+        'Choisissez le joueur',
+        ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
+
+    st.write('Vous avez selectionné:', option)    
+
+    p = shot_location(option)
 
     st.bokeh_chart(p, use_container_width=True)
