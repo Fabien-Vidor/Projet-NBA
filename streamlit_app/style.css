@@ -62,6 +62,10 @@ section[data-testid="stSidebar"] h2 {
   color: white;
 }
 
+.css-1y4p8pa {
+  max-width: 60rem;
+}
+
 /* Images */
 
 button[title="View fullscreen"] {

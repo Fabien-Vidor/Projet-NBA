@@ -6,6 +6,8 @@ from PIL import Image
 title = "Exploration des données"
 sidebar_name = "Exploration des données"
 
+df = pd.read_csv('./../data/NBA Shot Locations 1997 - 2020.csv')
+rank = pd.read_csv('./../data/ranking.csv')
 
 def run():
 
@@ -16,51 +18,25 @@ def run():
         This is your app's second tab. Fill it in `tabs/second_tab.py`.
         You can and probably should rename the file.
 
-        ## Test
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida urna vel tincidunt vestibulum. Nunc malesuada molestie odio, vel tincidunt arcu fringilla hendrerit. Sed leo velit, elementum nec ipsum id, sagittis tempus leo. Quisque viverra ipsum arcu, et ullamcorper arcu volutpat maximus. Donec volutpat porttitor mi in tincidunt. Ut sodales commodo magna, eu volutpat lacus sodales in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam interdum libero non leo iaculis bibendum. Suspendisse in leo posuere risus viverra suscipit.
-
-        Nunc eu tortor dolor. Etiam molestie id enim ut convallis. Pellentesque aliquet malesuada ipsum eget commodo. Ut at eros elit. Quisque non blandit magna. Aliquam porta, turpis ac maximus varius, risus elit sagittis leo, eu interdum lorem leo sit amet sapien. Nam vestibulum cursus magna, a dapibus augue pellentesque sed. Integer tincidunt scelerisque urna non viverra. Sed faucibus leo augue, ac suscipit orci cursus sed. Mauris sit amet consectetur nisi.
+        ## NBA Shot Locations 1997 – 2020
+        Ce jeu de données est sans doute le plus important. Il contient tous les tirs de NBA entre la
+        saison 1997 et 2020. Il contient 22 colonnes dont notamment le tireur, le type de tir, l’issue du tir, le
+        quart-temps, la distance, la location exacte sur le terrain, l’équipe du tireur et l’équipe adverse ou
+        encore les minutes et secondes restantes. 
         """
     )
-
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
-
-    st.line_chart(chart_data)
+    with st.expander("Afficher 5 lignes du dataframe"):
+        st.dataframe(df.sample(5), use_container_width=True)
 
     st.markdown(
         """
-        ## Test 2
+        ## Ranking
 
-        Proin malesuada diam blandit orci auctor, ac auctor lacus porttitor. Aenean id faucibus tortor. Morbi ac odio leo. Proin consequat facilisis magna eu elementum. Proin arcu sapien, venenatis placerat blandit vitae, pharetra ac ipsum. Proin interdum purus non eros condimentum, sit amet luctus quam iaculis. Quisque vitae sapien felis. Vivamus ut tortor accumsan, dictum mi a, semper libero. Morbi sed fermentum ligula, quis varius quam. Suspendisse rutrum, sapien at scelerisque vestibulum, ipsum nibh fermentum odio, vel pellentesque arcu erat at sapien. Maecenas aliquam eget metus ut interdum.
-        
-        ```python
-
-        def my_awesome_function(a, b):
-            return a + b
-        ```
-
-        Sed lacinia suscipit turpis sit amet gravida. Etiam quis purus in magna elementum malesuada. Nullam fermentum, sapien a maximus pharetra, mauris tortor maximus velit, a tempus dolor elit ut lectus. Cras ut nulla eget dolor malesuada congue. Quisque placerat, nulla in pharetra dapibus, nunc ligula semper massa, eu euismod dui risus non metus. Curabitur pretium lorem vel luctus dictum. Maecenas a dui in odio congue interdum. Sed massa est, rutrum eu risus et, pharetra pulvinar lorem.
+        Ce jeu de données contient le classement NBA entre 2003 et 2020. À une date donnée, nous
+        pouvons en extraire le classement et le pourcentage de victoire de chaque équipe sur la saison en
+        cours. Ce jeu de données nous sera utile dans la suite.
         """
     )
 
-    st.area_chart(chart_data)
-
-    st.markdown(
-        """
-        ## Test 3
-
-        You can also display images using [Pillow](https://pillow.readthedocs.io/en/stable/index.html).
-
-        ```python
-        import streamlit as st
-        from PIL import Image
-
-        st.image(Image.open("assets/sample-image.jpg"))
-
-        ```
-
-        """
-    )
-
-    st.image(Image.open("assets/sample-image.jpg"))
+    with st.expander("Afficher 5 lignes du dataframe"):
+        st.dataframe(rank.sample(5), use_container_width=True)

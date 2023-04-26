@@ -8,12 +8,10 @@ import config
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
 from tabs import intro, exploration, preparation, modelisation, demo
 
-
 st.set_page_config(
     page_title=config.TITLE,
     page_icon="assets/favicon-2.png"
 )
-
 
 with open("style.css", "r") as f:
     style = f.read()
@@ -44,7 +42,6 @@ def run():
     st.sidebar.markdown("---")
     st.sidebar.markdown(f"## {config.PROMOTION}")
 
-    st.sidebar.markdown("### Team members:")
     for member in config.TEAM_MEMBERS:
         st.sidebar.markdown(member.sidebar_markdown(), unsafe_allow_html=True)
 
