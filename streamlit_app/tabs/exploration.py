@@ -83,6 +83,8 @@ def run():
     with st.expander("Afficher 5 lignes du dataframe"):
         st.dataframe(rank.sample(5), use_container_width=True)
 
+    st.header("Visualisation des données")
+    
     option = st.selectbox(
         'Choisissez le joueur',
         ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
