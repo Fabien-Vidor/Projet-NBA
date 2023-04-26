@@ -94,3 +94,4 @@ def run():
     p = shot_location(option)
 
     st.bokeh_chart(p, use_container_width=True)
+
