@@ -2,66 +2,59 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+from joblib import load
 
 
 title = "Démo"
 sidebar_name = "Démo"
-
+rf = load('../data/saved_model.joblib')
+data_dict = {'Last Minute':[0],'W_PCT_2': [0],'Damian Lillard':[0],'LeBron James': [0],'Kevin Durant': [0],'Chris Paul': [0],'Russell Westbrook': [0],'James Harden': [0],'Anthony Davis': [0],'Giannis Antetokounmpo': [0],'Kawhi Leonard': [0],'Stephen Curry': [0],'Shot Distance': [0],'Shot Difficulty': [0]}
 
 def run():
 
     st.title(title)
 
-    st.markdown(
-        """
-        This is your app's second tab. Fill it in `tabs/second_tab.py`.
-        You can and probably skluhlkh rename the file.
+    with st.form("modélisation"):
+        st.write("Choisissez les variables :")
 
-        ## Test
+        # Sélection du joueur 
+        player = st.selectbox(
+            'Choisissez le joueur',
+            ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida urna vel tincidunt vestibulum. Nunc malesuada molestie odio, vel tincidunt arcu fringilla hendrerit. Sed leo velit, elementum nec ipsum id, sagittis tempus leo. Quisque viverra ipsum arcu, et ullamcorper arcu volutpat maximus. Donec volutpat porttitor mi in tincidunt. Ut sodales commodo magna, eu volutpat lacus sodales in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam interdum libero non leo iaculis bibendum. Suspendisse in leo posuere risus viverra suscipit.
+        # Création des variables nécessaires
+        shot_difficulty = st.slider("Difficulté du tir", max_value=4)
+        shot_distance = st.slider("Distance du tir", max_value=35)
+        last_minute = st.checkbox("Dernière minute")
 
-        Nunc eu tortor dolor. Etiam molestie id enim ut convallis. Pellentesque aliquet malesuada ipsum eget commodo. Ut at eros elit. Quisque non blandit magna. Aliquam porta, turpis ac maximus varius, risus elit sagittis leo, eu interdum lorem leo sit amet sapien. Nam vestibulum cursus magna, a dapibus augue pellentesque sed. Integer tincidunt scelerisque urna non viverra. Sed faucibus leo augue, ac suscipit orci cursus sed. Mauris sit amet consectetur nisi.
-        """
-    )
+        # Every form must have a submit button.
+        submitted = st.form_submit_button("Envoyer")
+        if submitted:
+
+            # Création du DataFrame
+            df_dict = pd.DataFrame.from_dict(data_dict)
+
+            # Ajout des paramètres
+            df_dict.loc[0, 'Last Minute'] = 1 if last_minute == True else 0
+            df_dict.loc[0, player] = 1
+            df_dict.loc[0, 'Shot Difficulty'] = shot_difficulty    
+            df_dict.loc[0, 'Shot Distance'] = shot_distance 
+
+            # Affichage du DataFrame modifié        
+            st.write('Affichage des paramètres')
+            st.dataframe(df_dict, use_container_width=True)
+
+            # Prédiction du tir
+            pred = rf.predict(df_dict)
+
+            # Affichage du résultat
+            st.write('Le tir est', 'réussi' if pred == 1 else 'raté')
+
+            # Ajout du gif si raté
+            if pred == 0:
+                st.image("assets/rate.gif")
 
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
 
     st.line_chart(chart_data)
 
-    st.markdown(
-        """
-        ## Test 2
-
-        Proin malesuada diam blandit orci auctor, ac auctor lacus porttitor. Aenean id faucibus tortor. Morbi ac odio leo. Proin consequat facilisis magna eu elementum. Proin arcu sapien, venenatis placerat blandit vitae, pharetra ac ipsum. Proin interdum purus non eros condimentum, sit amet luctus quam iaculis. Quisque vitae sapien felis. Vivamus ut tortor accumsan, dictum mi a, semper libero. Morbi sed fermentum ligula, quis varius quam. Suspendisse rutrum, sapien at scelerisque vestibulum, ipsum nibh fermentum odio, vel pellentesque arcu erat at sapien. Maecenas aliquam eget metus ut interdum.
-        
-        ```python
-
-        def my_awesome_function(a, b):
-            return a + b
-        ```
-
-        Sed lacinia suscipit turpis sit amet gravida. Etiam quis purus in magna elementum malesuada. Nullam fermentum, sapien a maximus pharetra, mauris tortor maximus velit, a tempus dolor elit ut lectus. Cras ut nulla eget dolor malesuada congue. Quisque placerat, nulla in pharetra dapibus, nunc ligula semper massa, eu euismod dui risus non metus. Curabitur pretium lorem vel luctus dictum. Maecenas a dui in odio congue interdum. Sed massa est, rutrum eu risus et, pharetra pulvinar lorem.
-        """
-    )
-
-    st.area_chart(chart_data)
-
-    st.markdown(
-        """
-        ## Test 3
-
-        You can also display images using [Pillow](https://pillow.readthedocs.io/en/stable/index.html).
-
-        ```python
-        import streamlit as st
-        from PIL import Image
-
-        st.image(Image.open("assets/sample-image.jpg"))
-
-        ```
-
-        """
-    )
-
-    st.image(Image.open("assets/sample-image.jpg"))
