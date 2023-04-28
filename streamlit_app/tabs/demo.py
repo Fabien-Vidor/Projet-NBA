@@ -15,15 +15,20 @@ def run():
 
     st.title(title)
 
+    st.write("Choisissez les variables :")
+
+    shot_distance = st.slider("Distance du tir", max_value=35)
+
     with st.form("modélisation"):
-        st.write("Choisissez les variables :")
 
         # Sélection du joueur 
         player = st.selectbox(
             'Choisissez le joueur',
             ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
+
+        type_de_tir = st.selectbox("Choisissez le type de tir",list(df_tx_reussite.loc[df_tx_reussite["Shot Distance"]>=shot_distance]["Action Type"]))
+        st.write(shot_distance)
         # Création des variables nécessaires
-        shot_distance = st.slider("Distance du tir", max_value=35)
         W_PCT = st.slider("Pourcentage de victoires de l'équipe adverse",min_value = 0.2,max_value = 1.0)
         last_minute = st.checkbox("Dernière minute")
         shot_difficulty = df_tx_reussite.loc[df_tx_reussite["Action Type"] == type_de_tir]["Note"]
@@ -38,7 +43,7 @@ def run():
             # Ajout des paramètres
             df_dict.loc[0, 'Last Minute'] = 1 if last_minute == True else 0
             df_dict.loc[0, player] = 1
-            df_dict.loc[0, 'Shot Difficulty'] = shot_difficulty    
+            df_dict.loc[0, 'Shot Difficulty'] = shot_difficulty.values[0]   
             df_dict.loc[0, 'Shot Distance'] = shot_distance 
             df_dict.loc[0,"W_PCT_2"] = W_PCT
 
