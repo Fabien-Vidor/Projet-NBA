@@ -23,8 +23,9 @@ def run():
             ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
 
         # Création des variables nécessaires
-        shot_difficulty = st.slider("Difficulté du tir", max_value=4)
+        shot_difficulty = st.slider("Difficulté du tir", max_value=20)
         shot_distance = st.slider("Distance du tir", max_value=35)
+        W_PCT = st.slider("Pourcentage de victoires de l'équipe adverse",min_value = 0.2,max_value = 1.0)
         last_minute = st.checkbox("Dernière minute")
 
         # Every form must have a submit button.
@@ -39,6 +40,7 @@ def run():
             df_dict.loc[0, player] = 1
             df_dict.loc[0, 'Shot Difficulty'] = shot_difficulty    
             df_dict.loc[0, 'Shot Distance'] = shot_distance 
+            df_dict.loc[0,"W_PCT_2"] = W_PCT
 
             # Affichage du DataFrame modifié        
             st.write('Affichage des paramètres')
