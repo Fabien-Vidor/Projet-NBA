@@ -16,10 +16,8 @@ def run():
 
     st.markdown(
         """
-        This is your app's second tab. Fill it in `tabs/second_tab.py`.
-        You can and probably should rename the file.
 
-        ## NBA Shot Locations 1997 – 2020
+        ### :orange[NBA Shot Locations 1997 – 2020]
         Ce jeu de données est sans doute le plus important. Il contient tous les tirs de NBA entre la
         saison 1997 et 2020. Il contient 22 colonnes dont notamment le tireur, le type de tir, l’issue du tir, le
         quart-temps, la distance, la location exacte sur le terrain, l’équipe du tireur ou
@@ -31,7 +29,7 @@ def run():
 
     st.markdown(
         """
-        ## Ranking
+        ### :orange[Ranking]
 
         Ce jeu de données contient le classement NBA entre 2003 et 2020. À une date donnée, nous
         pouvons en extraire le classement et le pourcentage de victoire de chaque équipe sur la saison en
