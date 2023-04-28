@@ -8,7 +8,7 @@ sidebar_name = "Introduction"
 def run():
 
     # TODO: choose between one of these GIFs
-    # st.image("https://dst-studio-template.s3.eu-west-3.amazonaws.com/1.gif")
+    st.image("assets/intro_white.gif", use_column_width='auto', width=900)
 
     # st.image("https://dst-studio-template.s3.eu-west-3.amazonaws.com/3.gif")
 
@@ -22,6 +22,10 @@ def run():
         un projet nécessitant une solution de machine learning. Notre projet a pour objectif de prédire l’issue
         des tirs de 10 des meilleurs joueurs actifs en NBA. Nous avions la consigne de n’avoir qu’un seul
         algorithme final où le joueur serait une variable.
+        """
+    )
+    st.markdown(
+        """    
         Comme toutes les ligues des sports populaires américains, la NBA donne une grande
         importance à la donnée. Cela nous a permis d’avoir accès à des données pertinentes. Certaines
         étaient déjà exploitables, tandis que d’autres ont nécessité des étapes de preprocessing que nous
@@ -32,6 +36,10 @@ def run():
         facteurs exerçant une influence non négligeable sur l’issue du tir comme par exemple la fatigue, la
         pression défensive, l’importance plus ou moins grande du tir ou encore l’état de forme du joueur ne
         sont parfois pas quantifiables ou partiellement voire complètement inaccessible.
+        """
+    )
+    st.markdown(
+        """
         Dans la suite, nous aurons dans un premier temps une étape d’exploration de données où des
         graphes montreront les tendances que nous avons tiré des données qui nous étaient accessibles. Cela
         sera suivie des étapes de preprocessing, où nous traduirons les tendances captées en des données
