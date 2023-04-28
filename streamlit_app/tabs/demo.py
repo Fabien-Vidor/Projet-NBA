@@ -9,6 +9,7 @@ title = "Démo"
 sidebar_name = "Démo"
 rf = load('../data/saved_model.joblib')
 data_dict = {'Last Minute':[0],'W_PCT_2': [0],'Damian Lillard':[0],'LeBron James': [0],'Kevin Durant': [0],'Chris Paul': [0],'Russell Westbrook': [0],'James Harden': [0],'Anthony Davis': [0],'Giannis Antetokounmpo': [0],'Kawhi Leonard': [0],'Stephen Curry': [0],'Shot Distance': [0],'Shot Difficulty': [0]}
+df_tx_reussite = pd.read_csv("df_tx_reussite.csv")
 
 def run():
 
@@ -21,7 +22,7 @@ def run():
         player = st.selectbox(
             'Choisissez le joueur',
             ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
-
+        type_de_tir = st.selectbox("Choisissez le type de tir",list(df_tx_reussite["Action Type"]))
         # Création des variables nécessaires
         shot_difficulty = st.slider("Difficulté du tir", max_value=20)
         shot_distance = st.slider("Distance du tir", max_value=35)
