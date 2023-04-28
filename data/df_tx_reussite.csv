@@ -1,0 +1,66 @@
+,Action Type,Shot Made Flag,Note
+0,Alley Oop Dunk Shot,0.9129916567342073,15
+1,Alley Oop Layup shot,0.6829268292682927,10
+2,Cutting Dunk Shot,0.9681647940074907,16
+3,Cutting Finger Roll Layup Shot,0.9166666666666666,15
+4,Cutting Layup Shot,0.8229665071770335,13
+5,Driving Bank Hook Shot,0.6296296296296297,8
+6,Driving Bank shot,0.7311320754716981,10
+7,Driving Dunk Shot,0.9128630705394191,15
+8,Driving Finger Roll Layup Shot,0.7480748074807481,11
+9,Driving Floating Bank Jump Shot,0.5688311688311688,6
+10,Driving Floating Jump Shot,0.4768211920529801,2
+11,Driving Hook Shot,0.4851063829787234,3
+12,Driving Jump shot,0.42857142857142855,0
+13,Driving Layup Shot,0.619641779029986,8
+14,Driving Reverse Dunk Shot,1.0,20
+15,Driving Reverse Layup Shot,0.6232394366197183,8
+16,Driving Slam Dunk Shot,0.9611650485436893,16
+17,Dunk Shot,0.8933333333333333,14
+18,Fadeaway Bank shot,0.7872340425531915,12
+19,Fadeaway Jump Shot,0.47472443937666287,2
+20,Finger Roll Layup Shot,0.7381703470031545,11
+21,Floating Jump shot,0.4853868194842407,3
+22,Hook Bank Shot,0.6666666666666666,9
+23,Hook Shot,0.394273127753304,0
+24,Jump Bank Hook Shot,1.0,20
+25,Jump Bank Shot,0.5435393258426966,6
+26,Jump Hook Shot,0.6037735849056604,7
+27,Jump Shot,0.33032575291948374,0
+28,Layup Shot,0.43989659629470057,1
+29,No Shot,0.53125,5
+30,Pullup Bank shot,0.639344262295082,9
+31,Pullup Jump shot,0.5072843060280904,4
+32,Putback Dunk Shot,0.8930041152263375,14
+33,Putback Layup Shot,0.7698412698412699,12
+34,Putback Reverse Dunk Shot,1.0,20
+35,Putback Slam Dunk Shot,0.90625,15
+36,Reverse Dunk Shot,0.8780487804878049,14
+37,Reverse Layup Shot,0.5878136200716846,7
+38,Reverse Slam Dunk Shot,0.9411764705882353,16
+39,Running Alley Oop Dunk Shot,0.9782608695652174,17
+40,Running Alley Oop Layup Shot,1.0,20
+41,Running Bank Hook Shot,1.0,20
+42,Running Bank shot,0.7519083969465649,12
+43,Running Dunk Shot,0.9705056179775281,17
+44,Running Finger Roll Layup Shot,0.8058823529411765,13
+45,Running Hook Shot,0.5094339622641509,5
+46,Running Jump Shot,0.4813052345343304,3
+47,Running Layup Shot,0.6953028430160693,10
+48,Running Pull-Up Jump Shot,0.5402010050251256,6
+49,Running Reverse Dunk Shot,1.0,20
+50,Running Reverse Layup Shot,0.7352941176470589,11
+51,Running Slam Dunk Shot,1.0,20
+52,Running Tip Shot,0.6,7
+53,Slam Dunk Shot,0.9790209790209791,17
+54,Step Back Bank Jump Shot,0.6428571428571429,9
+55,Step Back Jump shot,0.4627688913403199,2
+56,Tip Dunk Shot,0.8117647058823529,13
+57,Tip Layup Shot,0.5232067510548524,5
+58,Tip Shot,0.5060606060606061,4
+59,Turnaround Bank Hook Shot,0.36363636363636365,0
+60,Turnaround Bank shot,0.688,10
+61,Turnaround Fadeaway Bank Jump Shot,0.45614035087719296,1
+62,Turnaround Fadeaway shot,0.49410840534171246,4
+63,Turnaround Hook Shot,0.5252100840336135,5
+64,Turnaround Jump Shot,0.43167305236270753,1
