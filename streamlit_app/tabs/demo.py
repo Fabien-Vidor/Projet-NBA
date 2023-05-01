@@ -65,7 +65,7 @@ def run():
             
             # Ajout du gif si réussi
             if pred == 1:
-                st.image("assets/curry.gif",use_column_width=True)
+                st.image("assets/lebron.gif",use_column_width=True)
 
 
 
