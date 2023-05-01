@@ -13,6 +13,8 @@ df_tx_reussite = pd.read_csv("../data/df_tx_reussite_distance.csv")
 
 def run():
 
+    st.image("assets/intro_white.gif", use_column_width='auto', width=900)
+
     st.title(title)
 
     st.write("Choisissez les variables :")
@@ -60,6 +62,10 @@ def run():
             # Ajout du gif si raté
             if pred == 0:
                 st.image("assets/rate.gif")
+            
+            # Ajout du gif si réussi
+            if pred == 1:
+                st.image("assets/giphy.gif")
 
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
 

@@ -93,12 +93,7 @@ code4='''def get_dummies(df,colonne):
 
 final_df = get_dummies(new_df,'Player Name')'''
 
-code5='''def get_dummies(df,colonne):
-    # Cette fonction sert juste à rendre le get_dummies plus rapide
-    dummies = pd.get_dummies(df[colonne])
-    new_df = pd.concat([df,dummies],axis=1)
-    new_df=new_df.drop([cofrom sklearn.model_selection import train_test_split
-def final_df(df,rank,n,annee):
+code5='''def final_df(df,rank,n,annee):
     # On prépare la DataFrame "NBA Shot Locations 1997 - 2020"
     shot_loc = preparation_shot_location(df,annee)
     # On prépare la DataFrame "Ranking"
@@ -128,6 +123,8 @@ def final_df(df,rank,n,annee):
 final_df = get_dummies(new_df,'Player Name')'''
 
 def run():
+
+    st.image("assets/intro_white.gif", use_column_width='auto', width=900)
 
     st.title(title)
 
