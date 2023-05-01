@@ -91,3 +91,7 @@ section[tabindex="0"] .block-container {
 .css-1kyxreq {
   justify-content: center;
 }
+
+.block-container {
+  margin-bottom: 50px;
+}

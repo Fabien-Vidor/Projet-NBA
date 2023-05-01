@@ -67,7 +67,5 @@ def run():
             if pred == 1:
                 st.image("assets/giphy.gif")
 
-    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
 
-    st.line_chart(chart_data)
 
