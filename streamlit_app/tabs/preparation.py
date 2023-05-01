@@ -128,6 +128,8 @@ def run():
 
     st.title(title)
 
+    st.markdown("---")
+
     st.markdown(
         """
 

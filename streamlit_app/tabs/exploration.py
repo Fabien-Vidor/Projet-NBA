@@ -14,6 +14,9 @@ def run():
     st.image("assets/intro_white.gif", use_column_width='auto', width=900)
 
     st.title(title)
+    
+    st.markdown("---")
+
     st.header("Les jeux de données")
 
     st.markdown(

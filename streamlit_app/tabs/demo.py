@@ -5,8 +5,8 @@ from PIL import Image
 from joblib import load
 
 
-title = "Démo"
-sidebar_name = "Démo"
+title = "Démonstration"
+sidebar_name = "Démonstration"
 rf = load('../data/saved_model.joblib')
 data_dict = {'Last Minute':[0],'W_PCT_2': [0],'Damian Lillard':[0],'LeBron James': [0],'Kevin Durant': [0],'Chris Paul': [0],'Russell Westbrook': [0],'James Harden': [0],'Anthony Davis': [0],'Giannis Antetokounmpo': [0],'Kawhi Leonard': [0],'Stephen Curry': [0],'Shot Distance': [0],'Shot Difficulty': [0]}
 df_tx_reussite = pd.read_csv("../data/df_tx_reussite_distance.csv")
@@ -17,6 +17,8 @@ def run():
 
     st.title(title)
 
+    st.markdown("---")
+    
     st.write("Choisissez les variables :")
 
     shot_distance = st.slider("Distance du tir", max_value=35)
@@ -55,9 +57,6 @@ def run():
 
             # Prédiction du tir
             pred = rf.predict(df_dict)
-
-            # Affichage du résultat
-            st.write('Le tir est', 'réussi' if pred == 1 else 'raté')
 
             # Ajout du gif si raté
             if pred == 0:
