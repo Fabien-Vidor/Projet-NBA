@@ -26,7 +26,7 @@ def run():
             'Choisissez le joueur',
             ('James Harden', 'LeBron James', 'Chris Paul', 'Kevin Durant', 'Russell Westbrook', 'Stephen Curry', 'Kawhi Leonard', 'Anthony Davis', 'Damian Lillard', 'Giannis Antetokounmpo'))
 
-        type_de_tir = st.selectbox("Choisissez le type de tir",list(df_tx_reussite.loc[df_tx_reussite["Shot Distance"]>=shot_distance]["Action Type"]))
+        type_de_tir = st.selectbox("Choisissez le type de tir",list(df_tx_reussite.loc[df_tx_reussite["Distance max"]>=shot_distance]["Action Type"]))
         st.write(shot_distance)
         # Création des variables nécessaires
         W_PCT = st.slider("Pourcentage de victoires de l'équipe adverse",min_value = 0.2,max_value = 1.0)
