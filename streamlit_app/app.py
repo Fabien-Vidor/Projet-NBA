@@ -6,7 +6,7 @@ import streamlit as st
 import config
 
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
-from tabs import intro, exploration, preparation, modelisation, demo
+from tabs import intro, exploration, preparation, modelisation, demo, Presentation
 
 st.set_page_config(
     page_title=config.TITLE,
@@ -29,6 +29,7 @@ TABS = OrderedDict(
         (preparation.sidebar_name, preparation),
         (modelisation.sidebar_name, modelisation),
         (demo.sidebar_name, demo),
+        (Presentation.sidebar_name, Presentation),
     ]
 )
 
