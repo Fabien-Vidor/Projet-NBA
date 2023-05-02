@@ -12,7 +12,7 @@ def run():
     with tab1:
         st.header("Contact :")
         st.write(config.TEAM_MEMBERS[0].presentation_markdown(), unsafe_allow_html=True)
-        st.markdown("""
+        st.markdown("""A 23 ans et après un master 1 en mathématiques, je me forme actuellement en data science.
                     """)
 
     with tab2:
