@@ -30,7 +30,7 @@ def run():
 
         type_de_tir = st.selectbox("Choisissez le type de tir",list(df_tx_reussite.loc[df_tx_reussite["Distance max"]>=shot_distance]["Action Type"]))
         # Création des variables nécessaires
-        W_PCT = st.slider("Pourcentage de victoires de l'équipe adverse",min_value = 0.2,max_value = 1.0)
+        W_PCT = st.slider("Pourcentage de victoires de l'équipe adverse",min_value = 0.0,max_value = 1.0)
         last_minute = st.checkbox("Dernière minute")
         shot_difficulty = df_tx_reussite.loc[df_tx_reussite["Action Type"] == type_de_tir]["Note"]
 
