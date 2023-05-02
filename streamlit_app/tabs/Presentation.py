@@ -44,7 +44,7 @@ def run():
         
         st.markdown(
             """
-            De formation mathématiques (licence en mathématiques option informatique) j'ai ensuite fait carrière à l'Armée de Terre en tant que sous-officier.
+            De formation mathématique (licence en mathématiques option informatique) j'ai ensuite fait carrière à l'Armée de Terre en tant que sous-officier.
             Je reviens dorénavant vers mon ancien domaine en me formant en data science.
             """
         )
