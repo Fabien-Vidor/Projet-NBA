@@ -56,8 +56,7 @@ def run():
             pred = rf.predict(df_dict)
 
             # Affichage du résultat
-            st.write('Le tir est', 'réussi' if pred == 1 else 'raté')
-            st.write(np.round(rf.predict_proba(df_dict)[0,1],2))
+            st.write('Le tir est', 'réussi' if pred == 1 else 'raté',np.round(rf.predict_proba(df_dict)[0,1],2))
 
             # Ajout du gif si raté
             if pred == 0:
