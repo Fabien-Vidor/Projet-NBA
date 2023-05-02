@@ -18,7 +18,7 @@ def run():
     with tab2:
         
         st.markdown(
-            """
+            """Après une Licence en économie et un Master en école de commerce (Kedge Business School) je me suis tourné vers la en DataScience.
                
             """
         )
