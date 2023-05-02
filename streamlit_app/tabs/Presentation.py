@@ -10,13 +10,11 @@ def run():
     
     tab1, tab2, tab3, tab4 = st.tabs(["Leo Ferretti", "Florian Lluch", "Alex Randrianantoandro", "Fabien Vidor"])
     with tab1:
-        st.header("Contact :")
         st.write(config.TEAM_MEMBERS[0].presentation_markdown(), unsafe_allow_html=True)
         st.markdown("""A 23 ans et après un master 1 en mathématiques, je me forme actuellement en data science.
                     """)
 
     with tab2:
-        st.header("Contact :")
         st.write(config.TEAM_MEMBERS[1].presentation_markdown(), unsafe_allow_html=True)
         st.markdown(
             """
@@ -26,7 +24,6 @@ def run():
         
 
     with tab3:
-        st.header("Contact :")
         st.write(config.TEAM_MEMBERS[2].presentation_markdown(), unsafe_allow_html=True)
         
         st.markdown(
@@ -38,7 +35,6 @@ def run():
         
    
     with tab4:
-        st.header("Contact :")
         st.write(config.TEAM_MEMBERS[3].presentation_markdown(), unsafe_allow_html=True)
         
         st.markdown(
