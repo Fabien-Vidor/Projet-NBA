@@ -30,7 +30,9 @@ def run():
         
         st.markdown(
             """
-               
+            Après avoir obtenu ma license lors de ma reconversion en tant que Concepteur Développeur d'applications, j'ai fait ma première expérience de 2 ans dans une entreprise de Data.
+            Polyvalent, j'ai occupé le poste de développeur, d'administrateur système et j'ai découvert le poste de Data Analyst, c'est pour cela
+            qu'aujourd'hui je continue ma formation en me formant pour être Data Scientist.
             """
         )
         st.write(config.TEAM_MEMBERS[2].presentation_markdown(), unsafe_allow_html=True)
