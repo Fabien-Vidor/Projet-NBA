@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from member import Member
 
 title = "Qui sommes-nous ?"
 sidebar_name = "Qui sommes-nous ?"
@@ -9,20 +10,19 @@ def run():
     
     tab1, tab2, tab3, tab4 = st.tabs(["Leo Ferretti", "Florian Lluch", "Alex Randrianantoandro", "Fabien Vidor"])
     with tab1:
-        st.header("Leo Ferretti")
         st.markdown("""
                     """)
+        
     with tab2:
-        st.header("Florian Lluch")
         st.markdown(
             """
                
             """
         )
+        
    
 
     with tab3:
-        st.header("Alex Randrianantoandro")
         st.markdown(
             """
                
@@ -31,10 +31,10 @@ def run():
    
    
     with tab4:
-        st.header("Fabien Vidor")
         st.markdown(
             """
-               
+            De formation mathématiques (licence en mathématiques option informatique) j'ai ensuite fait carrière à l'armée de Terre en tant que sous-officier.
+            Je reviens dorénavant vers mon ancien domaine en me formant en data science.
             """
         )
    
